@@ -377,7 +377,7 @@ body {
     }
 
     .menu .wrapper-card .card-menu {
-        flex: 1 1 17rem;
-        max-width: 17rem;
+        flex: 1 1 20rem;
+        max-width: 14rem;
     }
 }
