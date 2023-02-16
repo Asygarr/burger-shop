@@ -1,0 +1,383 @@
+:root {
+    --primary: #E38B29;
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.5);
+    border-bottom: 1px solid #513c28;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+
+/* hero section */
+.hero {
+    background-image: url(../img/hero.jpg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all .8s ease;
+}
+
+.hero .content {
+    padding: 1.4rem 7% 15rem;
+    max-width: 60rem;
+    text-align: center;
+}
+
+.hero .content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 1px xpx 3px rgba(1, 1, 3, 0.5);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero .content p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-shadow: 1px xpx 3px rgba(1, 1, 3, 0.5);
+    mix-blend-mode: difference;
+}
+
+.hero .content .btn {
+    background-color: var(--primary);
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 1px xpx 3px rgba(1, 1, 3, 0.5);
+}
+
+
+/* about section */
+.about, .menu {
+    padding: 7rem 7%;
+}
+
+.about h2, .menu h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about h2 span, .menu h2 span {
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+
+/* menu section */
+.menu h2 {
+    margin-bottom: 1rem;
+}
+
+.menu .ingfo {
+    max-width: 30rem;
+    margin: 0 auto;
+    font-weight: 100;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.menu .wrapper-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+.menu .wrapper-card .card-menu{
+    flex: 1 1 15rem;
+    background-color: #513c28;
+    max-width: 15rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.menu .wrapper-card .card-menu .card-img img {
+    width: 100%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.menu .wrapper-card .card-menu .card-content {
+    color: #fff;
+    padding: 1rem;
+}
+
+.menu .wrapper-card .card-menu .card-content .btn {
+    background-color: var(--primary);
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 1px xpx 3px rgba(1, 1, 3, 0.5);
+}
+
+
+/* footer */
+.footer {
+    background-color: var(--primary);
+    padding: 2rem 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .socials a {
+    color: var(--bg);
+    font-size: 1.3rem;
+}
+
+.footer .socials a:hover {
+    color: #fff;
+}
+
+.footer .links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .links a {
+    color: var(--bg);
+}
+
+.footer .links a:hover {
+    color: #fff;
+}
+
+.footer .credit a {
+    color: var(--bg);
+}
+
+.footer .credit a:hover {
+    color: #fff;
+}
+
+
+/* responsive */
+/* leptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+
+    .navbar .navbar-extra a {
+        font-size: 1.8rem;
+    }
+
+    .hero::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+    }
+}
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .navbar .navbar-extra a {
+        font-size: 1.8rem;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: right 0.5s ease;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        display: block;
+        color: #000;
+        font-size: 2rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: left;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about .row .content {
+        padding: 0;
+    }
+
+    .about .row .content h3 {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .menu .wrapper-card .card-menu {
+        flex: 1 1 17rem;
+        max-width: 17rem;
+    }
+}
